@@ -24,7 +24,7 @@ class SecurityInfo extends \Piwik\Plugin
     public function getListHooksRegistered()
     {
         return array(
-            'AdminMenu.add' => 'addMenu',
+            'AdminMenu.addMenuEntry' => 'addMenu',
         );
     }
 
