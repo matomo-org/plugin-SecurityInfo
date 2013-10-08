@@ -5,8 +5,8 @@
  * @package PhpSecInfo
  * @author Piwik
  */
-use Piwik\Version;
 use Piwik\UpdateCheck;
+use Piwik\Version;
 
 /**
  * require the PhpSecInfo_Test_Application class
