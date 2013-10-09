@@ -31,7 +31,7 @@ class PhpSecInfo_Test_Application_Piwik extends PhpSecInfo_Test_Application
     {
         $this->current_value = Version::VERSION;
 
-        $this->recommended_value = Piwik_GetOption(UpdateCheck::LATEST_VERSION);
+        $this->recommended_value = \Piwik\Option::get(UpdateCheck::LATEST_VERSION);
     }
 
     function _execTest()
