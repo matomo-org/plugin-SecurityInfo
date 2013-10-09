@@ -10,6 +10,7 @@
  */
 namespace Piwik\Plugins\SecurityInfo;
 
+use Piwik\Menu\MenuAdmin;
 use Piwik\Piwik;
 
 /**
@@ -24,13 +25,13 @@ class SecurityInfo extends \Piwik\Plugin
     public function getListHooksRegistered()
     {
         return array(
-            'Menu.Admin.addItems' => 'addMenu',
+            'Menu.MenuAdmin.addItems' => 'addMenu',
         );
     }
 
     function addMenu()
     {
-        Piwik_AddAdminSubMenu('CoreAdminHome_MenuDiagnostic', 'SecurityInfo_Security',
+        MenuAdmin::getInstance()->add('CoreAdminHome_MenuDiagnostic', 'SecurityInfo_Security',
             array('module' => 'SecurityInfo', 'action' => 'index'),
             Piwik::isUserIsSuperUser(),
             $order = 10);
