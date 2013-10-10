@@ -17,7 +17,7 @@ use Piwik\View;
 /**
  * @package SecurityInfo
  */
-class Controller extends \Piwik\Controller\Admin
+class Controller extends \Piwik\Plugin\ControllerAdmin
 {
     function index()
     {
