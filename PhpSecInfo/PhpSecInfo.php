@@ -221,7 +221,6 @@ class PhpSecInfo
     /**
      * recurses through the Test subdir and includes classes in each test group subdir,
      * then builds an array of classnames for the tests that will be run
-     *
      */
     function loadTests()
     {
@@ -262,7 +261,6 @@ class PhpSecInfo
      * - $this->result_counts
      * - $this->num_tests_run
      * - $this->tests_not_run;
-     *
      */
     function runTests()
     {
@@ -312,7 +310,6 @@ class PhpSecInfo
 
     /**
      * This is the main output method.  The look and feel mimics phpinfo()
-     *
      */
     function renderOutput($page_title = "Security Information About PHP")
     {
@@ -475,7 +472,6 @@ class PhpSecInfo
      * As loading, then running, is a pretty common process, this saves a extra method call
      *
      * @since 0.1.1
-     *
      */
     function loadAndRun()
     {
@@ -529,7 +525,6 @@ class PhpSecInfo
 
     /**
      * A very, very simple "view" system
-     *
      */
     function loadView($view_name, $data = null)
     {

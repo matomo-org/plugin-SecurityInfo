@@ -63,7 +63,6 @@ class PhpSecInfo_Test_Cgi_Force_Redirect extends PhpSecInfo_Test_Cgi
 
     /**
      * Checks to see if cgi.force_redirect is enabled
-     *
      */
     function _execTest()
     {
@@ -81,7 +80,6 @@ class PhpSecInfo_Test_Cgi_Force_Redirect extends PhpSecInfo_Test_Cgi
 
     /**
      * Set the messages specific to this test
-     *
      */
     function _setMessages()
     {

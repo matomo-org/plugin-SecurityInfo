@@ -40,7 +40,6 @@ class PhpSecInfo_Test_Session_Use_Trans_Sid extends PhpSecInfo_Test_Session
 
     /**
      * Checks to see if allow_url_fopen is enabled
-     *
      */
     function _execTest()
     {
@@ -54,7 +53,6 @@ class PhpSecInfo_Test_Session_Use_Trans_Sid extends PhpSecInfo_Test_Session
 
     /**
      * Set the messages specific to this test
-     *
      */
     function _setMessages()
     {

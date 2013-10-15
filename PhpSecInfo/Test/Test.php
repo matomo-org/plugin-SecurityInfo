@@ -154,7 +154,6 @@ class PhpSecInfo_Test
      * Using this method rather than setting $this->_messages directly allows result
      * messages to be inherited.  This is broken out into a separate function rather
      * than the constructor for ease of extension purposes (php4 is whack, man).
-     *
      */
     function _setMessages()
     {
@@ -168,7 +167,6 @@ class PhpSecInfo_Test
 
     /**
      * Placeholder - extend for tests
-     *
      */
     function _retrieveCurrentValue()
     {
@@ -223,7 +221,6 @@ class PhpSecInfo_Test
      * @param integer $result_code
      * @param string $language_code
      * @param string $message
-     *
      */
     function setMessageForResult($result_code, $language_code, $message)
     {

@@ -49,7 +49,6 @@ class PhpSecInfo_Test_Curl extends PhpSecInfo_Test
 
     /**
      * Set the messages for Curl tests
-     *
      */
     function _setMessages()
     {

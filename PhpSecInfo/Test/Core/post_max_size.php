@@ -59,7 +59,6 @@ class PhpSecInfo_Test_Core_Post_Max_Size extends PhpSecInfo_Test_Core
 
     /**
      * Set the messages specific to this test
-     *
      */
     function _setMessages()
     {

@@ -86,7 +86,6 @@ class PhpSecInfo_Test_Core_Upload_Tmp_Dir extends PhpSecInfo_Test_Core
 
     /**
      * Set the messages specific to this test
-     *
      */
     function _setMessages()
     {

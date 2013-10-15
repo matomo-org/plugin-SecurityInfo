@@ -48,7 +48,6 @@ class PhpSecInfo_Test_Cgi extends PhpSecInfo_Test
 
     /**
      * Set the messages for CGI tests
-     *
      */
     function _setMessages()
     {

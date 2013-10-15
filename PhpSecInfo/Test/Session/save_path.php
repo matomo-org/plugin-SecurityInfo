@@ -92,7 +92,6 @@ class PhpSecInfo_Test_Session_Save_Path extends PhpSecInfo_Test_Session
 
     /**
      * Set the messages specific to this test
-     *
      */
     function _setMessages()
     {

@@ -82,7 +82,6 @@ class PhpSecInfo_Test_Core_Uid extends PhpSecInfo_Test_Core
 
     /**
      * Set the messages specific to this test
-     *
      */
     function _setMessages()
     {

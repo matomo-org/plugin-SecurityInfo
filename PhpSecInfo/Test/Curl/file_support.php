@@ -43,7 +43,6 @@ class PhpSecInfo_Test_Curl_File_Support extends PhpSecInfo_Test_Curl
      * Checks to see if libcurl's "file://" support is enabled by examining the "protocols" array
      * in the info returned from curl_version()
      * @return integer
-     *
      */
     function _execTest()
     {
@@ -63,7 +62,6 @@ class PhpSecInfo_Test_Curl_File_Support extends PhpSecInfo_Test_Curl
 
     /**
      * Set the messages specific to this test
-     *
      */
     function _setMessages()
     {

@@ -36,7 +36,6 @@ class PhpSecInfo_Test_Core_Expose_Php extends PhpSecInfo_Test_Core
 
     /**
      * Checks to see if expose_php is enabled
-     *
      */
     function _execTest()
     {
@@ -51,7 +50,6 @@ class PhpSecInfo_Test_Core_Expose_Php extends PhpSecInfo_Test_Core
 
     /**
      * Set the messages specific to this test
-     *
      */
     function _setMessages()
     {

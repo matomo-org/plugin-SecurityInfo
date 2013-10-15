@@ -40,7 +40,6 @@ class PhpSecInfo_Test_Core_Allow_Url_Include extends PhpSecInfo_Test_Core
 
     /**
      * Checks to see if allow_url_fopen is enabled
-     *
      */
     function _execTest()
     {
@@ -65,7 +64,6 @@ class PhpSecInfo_Test_Core_Allow_Url_Include extends PhpSecInfo_Test_Core
 
     /**
      * Set the messages specific to this test
-     *
      */
     function _setMessages()
     {
