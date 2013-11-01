@@ -2,9 +2,13 @@
 
 ## Description
 
-We highly recommend that all Piwik administrators enable the SecurityInfo plugin, and then view the Settings. 
+We highly recommend that all Piwik administrators enable the SecurityInfo plugin, and then view the Settings. The plugin is a tool in a multilayered security approach.
 
-It is a tool in a multilayered security approach. It does not replace secure development practices nor audit the code\/application.
+## FAQ
+
+__Does the plugin replace secure development practices or audit the code\/application?__
+
+No, it doesn't. It just gives you some information based on PhpSecInfo from the PHP Security Consortium.
 
 ## Changelog
 
