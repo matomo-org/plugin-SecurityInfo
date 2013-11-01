@@ -1,7 +1,7 @@
 {
     "name": "SecurityInfo",
     "version": "1.0",
-    "description": "Based on PhpSecInfo from the PHP Security Consortium, this plugin provides security information about your PHP environment and offers suggestions for improvement. It is a tool in a multilayered security approach. It does not replace secure development practices nor audit the code\/application.",
+    "description": "Provides security information about your PHP environmont and offers suggestions for improvement based on PhpSecInfo from the PHP Security Consortium.",
     "keywords": ["security","phpsec"],
     "license": "GPL-3.0+",
     "homepage": "http://piwik.org",
