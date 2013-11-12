@@ -21,11 +21,11 @@
                     <td>{{ j }}</td>
                     {% set color %}
                         {% if test.result == -1 %}
-                            background-color:green;color:white;
+                            background-color:#dff0d8;color:#468847;
                         {% elseif test.result == -2 %}
-                            background-color:yellow;color:black;
+                            background-color:#ffffe0;color:#9b7a44;
                         {% elseif test.result == -4 %}
-                            background-color:red;color:white;
+                            background-color:#f2dede;color:#b94a48;
                         {% endif %}
                     {% endset %}
                     <td style="{{ color }}}">{{ test.message }}</td>
