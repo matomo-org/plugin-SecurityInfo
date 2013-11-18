@@ -42,6 +42,6 @@ class Controller extends \Piwik\Plugin\ControllerAdmin
         $view = new View('@SecurityInfo/index');
         $this->setBasicVariablesView($view);
         $view->results = $results;
-        echo $view->render();
+        return $view->render();
     }
 }
