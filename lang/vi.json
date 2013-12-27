@@ -1,0 +1,9 @@
+{
+    "SecurityInfo": {
+        "PluginDescription": "Dựa trên PhpSecInfo từ hiệp hội bảo mật PHP, plugin này cung cấp thông tin bảo mật về môi trường PHP của bạn và cung cấp các đề xuất cải tiến. Nó là một công cụ trong một phương pháp bảo mật nhiều lớp. Nó không thay thế thực tiễn phát triển bảo mật cũng như thẩm định mã\/ứng dụng.",
+        "Result": "Kết quả",
+        "Security": "Bảo mật",
+        "SecurityInformation": "Thông tin bảo mật PHP",
+        "Test": "Thử nghiệm"
+    }
+}
