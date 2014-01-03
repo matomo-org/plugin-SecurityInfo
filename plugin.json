@@ -1,7 +1,7 @@
 {
     "name": "SecurityInfo",
     "version": "1.0.2",
-    "description": "Provides security information about your PHP environmont and offers suggestions for improvement based on PhpSecInfo from the PHP Security Consortium.",
+    "description": "Provides security information about your PHP environment and offers suggestions based on PhpSecInfo from the PHP Security Consortium.",
     "keywords": ["security","phpsec"],
     "license": "GPL v3+",
     "homepage": "http://piwik.org",
