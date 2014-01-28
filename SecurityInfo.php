@@ -33,7 +33,7 @@ class SecurityInfo extends \Piwik\Plugin
     {
         MenuAdmin::getInstance()->add('CoreAdminHome_MenuDiagnostic', 'SecurityInfo_Security',
             array('module' => 'SecurityInfo', 'action' => 'index'),
-            Piwik::isUserIsSuperUser(),
+            Piwik::hasUserSuperUserAccess(),
             $order = 10);
     }
 }

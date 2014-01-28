@@ -21,7 +21,7 @@ class Controller extends \Piwik\Plugin\ControllerAdmin
 {
     function index()
     {
-        Piwik::checkUserIsSuperUser();
+        Piwik::checkUserHasSuperUserAccess();
 
         require_once(dirname(__FILE__) . '/PhpSecInfo/PhpSecInfo.php');
 
