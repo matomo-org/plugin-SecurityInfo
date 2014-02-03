@@ -16,9 +16,6 @@ use Piwik\Piwik;
  */
 class SecurityInfo extends \Piwik\Plugin
 {
-    /**
-     * @see Piwik_Plugin::getListHooksRegistered
-     */
     public function getListHooksRegistered()
     {
         return array(
