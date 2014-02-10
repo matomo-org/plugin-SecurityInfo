@@ -1,6 +1,7 @@
 {
     "SecurityInfo": {
         "Result": "תוצאה",
-        "Security": "אבטחה"
+        "Security": "אבטחה",
+        "Test": "בדיקה"
     }
 }
