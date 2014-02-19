@@ -502,6 +502,11 @@ class PhpSecInfo
         $results['num_tests_run'] = $this->num_tests_run;
 
         ksort($results['test_results']);
+        foreach ($results['test_results'] as &$innerList) {
+            if (is_array($innerList)) {
+                ksort($innerList);
+            }
+        }
 
         return $results;
     }
