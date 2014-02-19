@@ -501,6 +501,8 @@ class PhpSecInfo
         $results['result_counts'] = $this->result_counts;
         $results['num_tests_run'] = $this->num_tests_run;
 
+        ksort($results['test_results']);
+
         return $results;
     }
 
