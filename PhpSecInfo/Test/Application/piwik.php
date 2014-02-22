@@ -55,9 +55,16 @@ class PhpSecInfo_Test_Application_Piwik extends PhpSecInfo_Test_Application
     {
         parent::_setMessages();
 
-        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_OK, 'en', "You are running Piwik " . $this->current_value . " (the latest version).");
-        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_NOTICE, 'en', "You are running Piwik " . $this->current_value . ".  The latest version of Piwik is " . $this->recommended_value . ".");
-        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_WARN, 'en', "You are running Piwik " . $this->current_value . " which is no longer supported by the Piwik developers. We recommend running the latest (stable) version of Piwik which includes numerous enhancements, bug fixes, and security fixes.");
+        $piwikVersion = $this->current_value;
+        $recommendedValue = $this->recommended_value;
+
+        if(\Piwik\Common::getRequestVar('tests_hide_piwik_version', 0, 'int') == 1) {
+            $piwikVersion = $recommendedValue = 'Screenshot testing - Version is hidden';
+        }
+
+        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_OK, 'en', "You are running Piwik " . $piwikVersion . " (the latest version).");
+        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_NOTICE, 'en', "You are running Piwik " . $piwikVersion . ".  The latest version of Piwik is " . $recommendedValue . ".");
+        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_WARN, 'en', "You are running Piwik " . $piwikVersion . " which is no longer supported by the Piwik developers. We recommend running the latest (stable) version of Piwik which includes numerous enhancements, bug fixes, and security fixes.");
         $this->setMessageForResult(PHPSECINFO_TEST_RESULT_ERROR, 'en', "Unable to determine the latest version of Piwik available.");
     }
 }
