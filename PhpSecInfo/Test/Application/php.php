@@ -63,6 +63,10 @@ class PhpSecInfo_Test_Application_Php extends PhpSecInfo_Test_Application
     {
         parent::_setMessages();
 
+        if(\Piwik\Common::getRequestVar('tests_hide_piwik_version', 0, 'int') == 1) {
+            $this->recommended_value = 'Screenshot testing - Version is hidden';
+        }
+
         $this->setMessageForResult(PHPSECINFO_TEST_RESULT_OK, 'en', "You are running PHP " . $this->current_value .
             ($this->current_value == $this->recommended_value
                 ? " (the latest version)."
