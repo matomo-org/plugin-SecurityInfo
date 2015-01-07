@@ -12,7 +12,7 @@ describe("SecurityInfoReport", function () {
 
     it('should load the security info admin page correctly', function (done) {
         expect.screenshot('admin_security_info').to.be.captureSelector('#content', function (page) {
-            page.load("?" + generalParams + "&module=SecurityInfo&tests_hide_piwik_version=1");
+            page.load("?idSite=1&period=year&date=2012-08-09&module=SecurityInfo&tests_hide_piwik_version=1");
         }, done);
     });
 });
