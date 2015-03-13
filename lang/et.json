@@ -1,6 +1,5 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "Antud plugin pakub turvalisuse teavet sinu PHP keskkonna kohta ja soovitab parendusi lähtudes PhpSecInfost (PHP Security Consortiumi poolt). Antud tööriist pakub mitmekihilist lähenemist turvalisusele, kuid ei asenda turvalisi arenduspraktikaid ega auditeeri rakenduse koodi.",
         "Result": "Tulemus",
         "Security": "Turvalisus",
         "SecurityInformation": "PHP turvalisuse info",
