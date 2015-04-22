@@ -1,8 +1,9 @@
 {
     "SecurityInfo": {
-        "Result": "Resultat",
+        "PluginDescription": "Baseret på phpsysinfo fra PHP Security Consortium, giver udvidelsen sikkerhedsoplysninger om PHP miljøet og giver forslag til forbedringer. Det er et værktøj i en multilagdelt sikkerhedstilgang. Det erstatter ikke sikkerudviklings praksis eller revision af kode\/anvendelse.",
         "Security": "Sikkerhed",
         "SecurityInformation": "PHP sikkerhedsinformation",
-        "Test": "Test"
+        "Test": "Test",
+        "Result": "Resultat"
     }
 }

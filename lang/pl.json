@@ -1,8 +1,8 @@
 {
     "SecurityInfo": {
-        "Result": "Wynik",
         "Security": "Bezpieczeństwo",
         "SecurityInformation": "Informacje o zabezpieczeniach PHP",
-        "Test": "Test"
+        "Test": "Test",
+        "Result": "Wynik"
     }
 }

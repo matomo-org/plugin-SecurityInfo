@@ -1,8 +1,8 @@
 {
     "SecurityInfo": {
-        "Result": "Emaitza",
         "Security": "Segurtasuna",
         "SecurityInformation": "PHP segurtasun-informazioa",
-        "Test": "Probatu"
+        "Test": "Probatu",
+        "Result": "Emaitza"
     }
 }

@@ -1,8 +1,8 @@
 {
     "SecurityInfo": {
-        "Result": "Eredmény",
         "Security": "Biztonság",
         "SecurityInformation": "PHP biztonsági információ",
-        "Test": "Teszt"
+        "Test": "Teszt",
+        "Result": "Eredmény"
     }
 }

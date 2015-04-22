@@ -1,8 +1,8 @@
 {
     "SecurityInfo": {
-        "Result": "Përfundimi",
         "Security": "Siguri",
         "SecurityInformation": "Të dhëna Sigurie",
-        "Test": "Provë"
+        "Test": "Provë",
+        "Result": "Përfundimi"
     }
 }

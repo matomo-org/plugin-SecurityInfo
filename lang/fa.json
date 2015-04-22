@@ -1,8 +1,8 @@
 {
     "SecurityInfo": {
-        "Result": "نتایج",
         "Security": "امنیت",
         "SecurityInformation": "اطلاعات امنیت پی اچ پی",
-        "Test": "آزمایش"
+        "Test": "آزمایش",
+        "Result": "نتایج"
     }
 }

@@ -1,8 +1,8 @@
 {
     "SecurityInfo": {
-        "Result": "შედეგი",
         "Security": "უსაფრთხოება",
         "SecurityInformation": "PHP უსაფრთხოების ინფორმაცია",
-        "Test": "ტესტი"
+        "Test": "ტესტი",
+        "Result": "შედეგი"
     }
 }
