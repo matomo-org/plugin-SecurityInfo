@@ -1,5 +1,6 @@
 {
     "SecurityInfo": {
+        "PluginDescription": "Baziran na PhpSecInfo iz PHP Security konzorcijuma, ovaj dodatak omogućuje bezbednosne informacije u pogledu vašeg PHP okruženja te nudi predloge za njegovo unapređenje. U pitanju je alat sa višeslojnim pristupom bezbednosti. Nije zamena za secure development.",
         "Security": "Sigurnost",
         "SecurityInformation": "Informacije o PHP sigurnosti",
         "Test": "Test",
