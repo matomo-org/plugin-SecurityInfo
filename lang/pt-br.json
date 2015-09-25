@@ -1,5 +1,6 @@
 {
     "SecurityInfo": {
+        "PluginDescription": "Baseado em PhpSecInfo do Consórcio de Segurança PHP, este plugin fornece informações de segurança sobre o seu ambiente PHP e oferece sugestões para melhorias. É uma ferramenta com uma abordagem de segurança em camadas. Ela não substitui as práticas de desenvolvimento de segurança nem audita o código\/aplicativo.",
         "Security": "Segurança",
         "SecurityInformation": "Segurança da Informação PHP",
         "Test": "Teste",
