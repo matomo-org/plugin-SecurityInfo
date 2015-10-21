@@ -7,7 +7,7 @@
     "homepage": "http://piwik.org",
     "require": {
         "piwik": ">=2.4.0-b1",
-        "php": ">=5.3.0"
+        "php": ">=5.3.3"
     },
     "authors": [
         {
