@@ -1,5 +1,6 @@
 {
     "SecurityInfo": {
+        "PluginDescription": "Ta vtičnik, ki temelji na programski kodi PhpSecInfo mednarodne skupine PHP Security Consortium, omogoča informacije o varnosti vašega PHP okolja in ponuja nasvete za izboljšave. Orodje ne nadomešča dobre prakse pri razvoju programske kode nit ne nadzira same programske kode.",
         "Security": "Varnost",
         "SecurityInformation": "PHP varnostni podatki",
         "Test": "Test",
