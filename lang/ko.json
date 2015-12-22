@@ -1,5 +1,6 @@
 {
     "SecurityInfo": {
+        "PluginDescription": "PHP 보안 컨소시엄에서 나온 PhpSecInfo에 따르면, 이 플러그인은 당신의 PHP 환경에 대한 보안 정보를 제공하며 개선을 위해 여러 제안을 할 것입니다. 또한, 이 도구는 멀티레이어 보안 접근을 합니다. 하지만 이는 보안 개발 연습이나 코드\/어플리케이션의 감사를 대체하지는 못합니다.",
         "Security": "보안",
         "SecurityInformation": "PHP 보안 정보",
         "Test": "테스트",
