@@ -9,8 +9,8 @@
         more secure?</a></p>
 <div style="max-width:980px;">
     {% for i,section in results.test_results %}
-        <h2>{{ i }}</h2>
-        <table class="dataTable entityTable">
+    <div piwik-content-block content-title="{{ i|e('html_attr') }}">
+        <table piwik-content-table>
             <thead>
             <tr>
                 <th>{{ 'SecurityInfo_Test'|translate }}</th>
@@ -35,6 +35,7 @@
             {% endfor %}
             </tbody>
         </table>
+    </div>
     {% endfor %}
 </div>
 {% endblock %}
