@@ -3,10 +3,12 @@
 {% set title %}{{ 'SecurityInfo_SecurityInformation'|translate }}{% endset %}
 
 {% block content %}
-<h2>{{ title }}</h2>
-<p>{{ 'SecurityInfo_PluginDescription'|translate }}</p>
-<p>Learn more: read our guide <a rel='noreferrer' target='_blank' href='http://piwik.org/security/how-to-secure-piwik/'>Hardening Piwik: How to make Piwik and your web server
-        more secure?</a></p>
+<div piwik-content-intro>
+    <h2>{{ title }}</h2>
+    <p>{{ 'SecurityInfo_PluginDescription'|translate }}</p>
+    <p>Learn more: read our guide <a rel='noreferrer' target='_blank' href='http://piwik.org/security/how-to-secure-piwik/'>Hardening Piwik: How to make Piwik and your web server
+            more secure?</a></p>
+</div>
 {% for i,section in results.test_results %}
 <div piwik-content-block content-title="{{ i|e('html_attr') }}">
     <table piwik-content-table class="securityInfoTable">
