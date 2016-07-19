@@ -27,20 +27,20 @@ env:
   global:
     - PLUGIN_NAME=SecurityInfo
     - PIWIK_ROOT_DIR=$TRAVIS_BUILD_DIR/piwik
-    - PIWIK_LATEST_STABLE_TEST_TARGET=2.15.0-rc4
-    - secure: "dfsKGW14Wf65YEu8SDvpmU1jorkSVIDHTCCx15OkRYLx0kpD3B/pVkfGX4gOeRY1GNYyWkkBLFNrCjRNKaW7BWTTVGAkdaNl8AOhe1SGiX1a85IuekgBecIWvI79OqMUN37KvizdKB2nM0P6cSImlk19QTfesonnUXMvH0/O5Q8="
-    - secure: "HYJ7agI2yqnCeJAvw3QmbkDweobQxpZE3jnW83PItnoidhEJdDedr9tglB1N+pmOQKLBr3NozSUx3Kqoj/r+rtxfMMQbTSlhQgwWBG7JqQzNJRAB+G+xNovoKSJdvaqY0lhD9NZCL6u4vfLp0iwM+3bscHSNFG58b4YSdHk63Fo="
+    # this variable controls the version of Piwik your tests will run against.
+    # by default it will run against the maximum support version read from plugin.json
+    # (PIWIK_TEST_TARGET=maximum_supported_piwik).
+    # You can also specify a specific Piwik version
+    # (PIWIK_TEST_TARGET=2.16.0-b1).
+    - PIWIK_TEST_TARGET=maximum_supported_piwik
   matrix:
-    - TEST_SUITE=UITests MYSQL_ADAPTER=PDO_MYSQL TEST_AGAINST_PIWIK_BRANCH=$PIWIK_LATEST_STABLE_TEST_TARGET
+    - TEST_SUITE=UITests MYSQL_ADAPTER=PDO_MYSQL TEST_AGAINST_PIWIK_BRANCH=$PIWIK_TEST_TARGET
 
 matrix:
   exclude:
-    # execute latest stable tests only w/ PHP 5.6
-    - php: 5.3.3
-      env: TEST_SUITE=PluginTests MYSQL_ADAPTER=PDO_MYSQL TEST_AGAINST_CORE=minimum_required_piwik
     # execute UI tests only w/ PHP 5.6
     - php: 5.3.3
-      env: TEST_SUITE=UITests MYSQL_ADAPTER=PDO_MYSQL TEST_AGAINST_PIWIK_BRANCH=$PIWIK_LATEST_STABLE_TEST_TARGET
+      env: TEST_SUITE=UITests MYSQL_ADAPTER=PDO_MYSQL TEST_AGAINST_PIWIK_BRANCH=$PIWIK_TEST_TARGET
 
 sudo: required
 
