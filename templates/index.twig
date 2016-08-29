@@ -3,38 +3,33 @@
 {% set title %}{{ 'SecurityInfo_SecurityInformation'|translate }}{% endset %}
 
 {% block content %}
-<h2>{{ title }}</h2>
-<p>{{ 'SecurityInfo_PluginDescription'|translate }}</p>
-<p>Learn more: read our guide <a rel='noreferrer' target='_blank' href='http://piwik.org/security/how-to-secure-piwik/'>Hardening Piwik: How to make Piwik and your web server
-        more secure?</a></p>
-<div style="max-width:980px;">
-    {% for i,section in results.test_results %}
-        <h2>{{ i }}</h2>
-        <table class="dataTable entityTable">
-            <thead>
-            <tr>
-                <th>{{ 'SecurityInfo_Test'|translate }}</th>
-                <th>{{ 'SecurityInfo_Result'|translate }}</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for j,test in section %}
-                <tr>
-                    <td>{{ j }}</td>
-                    {% set color %}
-                        {% if test.result == -1 %}
-                            background-color:#dff0d8;color:#468847;
-                        {% elseif test.result == -2 %}
-                            background-color:#ffffe0;color:#b94a48;
-                        {% elseif test.result == -4 %}
-                            background-color:#f2dede;color:#b94a48;font-weight:bold;
-                        {% endif %}
-                    {% endset %}
-                    <td style="{{ color }}}">{{ test.message|raw }}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    {% endfor %}
+<div piwik-content-intro>
+    <h2>{{ title }}</h2>
+    <p>{{ 'SecurityInfo_PluginDescription'|translate }}</p>
+    <p>Learn more: read our guide <a rel='noreferrer' target='_blank' href='http://piwik.org/security/how-to-secure-piwik/'>Hardening Piwik: How to make Piwik and your web server
+            more secure?</a></p>
 </div>
+{% for i,section in results.test_results %}
+<div piwik-content-block content-title="{{ i|e('html_attr') }}">
+    <table piwik-content-table class="securityInfoTable">
+        <thead>
+        <tr>
+            <th>{{ 'SecurityInfo_Test'|translate }}</th>
+            <th>{{ 'SecurityInfo_Result'|translate }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for j,test in section %}
+            <tr>
+                <td class="test">{{ j }}</td>
+                {% set color -%}
+                    {% if test.result == -1 %}testresult1{% elseif test.result == -2 %}testresult2{% elseif test.result == -4 %}testresult4{% else %}testresult5{% endif %}
+                {%- endset %}
+                <td class="{{ color }}">{{ test.message|raw }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endfor %}
 {% endblock %}
