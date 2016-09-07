@@ -7,7 +7,13 @@
     "homepage": "http://piwik.org",
     "require": {
         "piwik": ">=3.0.0-b1,<4.0.0-b1",
-        "php": ">=5.3.3"
+        "php": ">=5.5.0"
+    },
+
+    "support": {
+        "issues": "https://github.com/piwik/plugin-SecurityInfo/issues",
+        "forum": "https://forum.piwik.org",
+        "source": "https://github.com/piwik/plugin-SecurityInfo"
     },
     "authors": [
         {
