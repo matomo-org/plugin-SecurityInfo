@@ -6,8 +6,7 @@
     "license": "GPL v3+",
     "homepage": "http://piwik.org",
     "require": {
-        "piwik": ">=3.0.0-b1,<4.0.0-b1",
-        "php": ">=5.5.0"
+        "piwik": ">=3.0.0-b1,<4.0.0-b1"
     },
 
     "support": {
