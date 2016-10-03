@@ -1,13 +1,18 @@
 {
     "name": "SecurityInfo",
-    "version": "1.0.5",
+    "version": "3.0.0",
     "description": "Provides security information about your PHP environment and offers suggestions based on PhpSecInfo from the PHP Security Consortium.",
     "keywords": ["security","phpsec"],
     "license": "GPL v3+",
     "homepage": "http://piwik.org",
     "require": {
-        "piwik": ">=2.4.0-b1,<3.0.0-b1",
-        "php": ">=5.3.3"
+        "piwik": ">=3.0.0-b1,<4.0.0-b1"
+    },
+
+    "support": {
+        "issues": "https://github.com/piwik/plugin-SecurityInfo/issues",
+        "forum": "https://forum.piwik.org",
+        "source": "https://github.com/piwik/plugin-SecurityInfo"
     },
     "authors": [
         {
