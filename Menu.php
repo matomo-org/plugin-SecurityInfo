@@ -15,9 +15,12 @@ class Menu extends \Piwik\Plugin\Menu
 {
     public function configureAdminMenu(MenuAdmin $menu)
     {
-        $menu->add('CoreAdminHome_MenuDiagnostic', 'SecurityInfo_Security',
-                   array('module' => 'SecurityInfo', 'action' => 'index'),
-                   Piwik::hasUserSuperUserAccess(),
-                   $order = 10);
+        if (Piwik::hasUserSuperUserAccess()) {
+            $menu->addDiagnosticItem(
+                'SecurityInfo_Security',
+                array('module' => 'SecurityInfo', 'action' => 'index'),
+                $order = 10
+            );
+        }
     }
 }
