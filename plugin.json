@@ -1,6 +1,6 @@
 {
     "name": "SecurityInfo",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "Provides security information about your PHP environment and offers suggestions based on PhpSecInfo from the PHP Security Consortium.",
     "keywords": ["security","phpsec"],
     "license": "GPL v3+",
