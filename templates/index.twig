@@ -7,6 +7,13 @@
 <p>{{ 'SecurityInfo_PluginDescription'|translate }}</p>
 <p>Learn more: read our guide <a rel='noreferrer' target='_blank' href='http://piwik.org/security/how-to-secure-piwik/'>Hardening Piwik: How to make Piwik and your web server
         more secure?</a></p>
+        
+        
+<p class="alert-info alert">Did you know?
+The <a target='_blank' href='?module=Proxy&action=redirect&url=https://plugins.piwik.org/ActivityLog'>Activity Log plugin for Piwik</a> improves your security and diagnostic
+by letting you quickly review the actions performed by members of your organization or clients in your Piwik.
+</p>
+
 <div style="max-width:980px;">
     {% for i,section in results.test_results %}
         <h2>{{ i }}</h2>
