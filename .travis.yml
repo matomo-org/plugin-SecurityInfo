@@ -27,8 +27,6 @@ env:
   global:
     - PLUGIN_NAME=SecurityInfo
     - PIWIK_ROOT_DIR=$TRAVIS_BUILD_DIR/piwik
-    - secure: "dfsKGW14Wf65YEu8SDvpmU1jorkSVIDHTCCx15OkRYLx0kpD3B/pVkfGX4gOeRY1GNYyWkkBLFNrCjRNKaW7BWTTVGAkdaNl8AOhe1SGiX1a85IuekgBecIWvI79OqMUN37KvizdKB2nM0P6cSImlk19QTfesonnUXMvH0/O5Q8="
-    - secure: "HYJ7agI2yqnCeJAvw3QmbkDweobQxpZE3jnW83PItnoidhEJdDedr9tglB1N+pmOQKLBr3NozSUx3Kqoj/r+rtxfMMQbTSlhQgwWBG7JqQzNJRAB+G+xNovoKSJdvaqY0lhD9NZCL6u4vfLp0iwM+3bscHSNFG58b4YSdHk63Fo="
     # this variable controls the version of Piwik your tests will run against.
     # by default it will run against the maximum support version read from plugin.json
     # (PIWIK_TEST_TARGET=maximum_supported_piwik).
@@ -41,7 +39,7 @@ env:
 matrix:
   exclude:
     # execute UI tests only w/ PHP 5.6
-    - php: 5.3.3
+    - php: 5.3
       env: TEST_SUITE=UITests MYSQL_ADAPTER=PDO_MYSQL TEST_AGAINST_PIWIK_BRANCH=$PIWIK_TEST_TARGET
 
 sudo: required
@@ -51,7 +49,6 @@ script: $PIWIK_ROOT_DIR/tests/travis/travis.sh
 before_install:
   # do not use the Zend allocator on PHP 5.3 since it will randomly segfault after program execution
   - '[[ "$TRAVIS_PHP_VERSION" == 5.3* ]] && export USE_ZEND_ALLOC=0 || true'
-  - ./tests/travis/install_git_lfs.sh
 
 install:
   # move all contents of current repo (which contains the plugin) to a new directory
@@ -69,7 +66,7 @@ install:
   - '[ -d ./tests/travis/.git ] || sh -c "rm -rf ./tests/travis && git clone https://github.com/piwik/travis-scripts.git ./tests/travis"'
   - cd ./tests/travis ; git checkout master ; cd ../..
 
-  - export GENERATE_TRAVIS_YML_COMMAND="php ./tests/travis/generator/main.php generate:travis-yml --plugin=\"SecurityInfo\" --verbose"
+  - export GENERATE_TRAVIS_YML_COMMAND="php ./tests/travis/generator/main.php generate:travis-yml --plugin=\"SecurityInfo\" --php-versions=\"5.6,5.3\" --verbose"
   - '[[ "$TRAVIS_JOB_NUMBER" != *.1 || "$TRAVIS_PULL_REQUEST" != "false" ]] || ./tests/travis/autoupdate_travis_yml.sh'
 
   - ./tests/travis/checkout_test_against_branch.sh
@@ -133,6 +130,7 @@ before_script:
 
   - ./tests/travis/prepare.sh
   - ./tests/travis/setup_webserver.sh
+  - if [[ "$TRAVIS_PHP_VERSION" != 5.3* ]]; then ./tests/travis/install_phantomjs.sh; export PATH=$PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64/bin:$PATH; fi
 
   - cd tests/PHPUnit
 
