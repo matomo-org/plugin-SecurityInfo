@@ -4,7 +4,7 @@ language: php
 
 php:
   - 5.6
-  - 5.3
+  - 5.5
 #  - hhvm
 
 services:
@@ -27,8 +27,6 @@ env:
   global:
     - PLUGIN_NAME=SecurityInfo
     - PIWIK_ROOT_DIR=$TRAVIS_BUILD_DIR/piwik
-    - secure: "dfsKGW14Wf65YEu8SDvpmU1jorkSVIDHTCCx15OkRYLx0kpD3B/pVkfGX4gOeRY1GNYyWkkBLFNrCjRNKaW7BWTTVGAkdaNl8AOhe1SGiX1a85IuekgBecIWvI79OqMUN37KvizdKB2nM0P6cSImlk19QTfesonnUXMvH0/O5Q8="
-    - secure: "HYJ7agI2yqnCeJAvw3QmbkDweobQxpZE3jnW83PItnoidhEJdDedr9tglB1N+pmOQKLBr3NozSUx3Kqoj/r+rtxfMMQbTSlhQgwWBG7JqQzNJRAB+G+xNovoKSJdvaqY0lhD9NZCL6u4vfLp0iwM+3bscHSNFG58b4YSdHk63Fo="
     # this variable controls the version of Piwik your tests will run against.
     # by default it will run against the maximum support version read from plugin.json
     # (PIWIK_TEST_TARGET=maximum_supported_piwik).
@@ -132,6 +130,7 @@ before_script:
 
   - ./tests/travis/prepare.sh
   - ./tests/travis/setup_webserver.sh
+  - if [[ "$TRAVIS_PHP_VERSION" != 5.3* ]]; then ./tests/travis/install_phantomjs.sh; export PATH=$PWD/travis_phantomjs/phantomjs-2.1.1-linux-x86_64/bin:$PATH; fi
 
   - cd tests/PHPUnit
 
