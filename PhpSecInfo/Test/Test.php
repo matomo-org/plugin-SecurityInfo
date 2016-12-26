@@ -381,6 +381,11 @@ class PhpSecInfo_Test
         }
 
         $last = strtolower($val{strlen($val) - 1});
+
+        if (is_string($last)) {
+            $val = substr($val, 0, -1);
+        }
+
         switch ($last) {
             // The 'G' modifier is available since PHP 5.1.0
             case 'g':
