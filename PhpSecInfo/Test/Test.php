@@ -109,7 +109,7 @@ class PhpSecInfo_Test
      *
      * @return PhpSecInfo_Test
      */
-    function PhpSecInfo_Test()
+    function __construct()
     {
         //$this->_setTestValues();
 
