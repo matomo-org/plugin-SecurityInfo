@@ -1,5 +1,6 @@
 {
     "SecurityInfo": {
+        "PluginDescription": "Tämä lisäosa tarjoaa \"PHP Security Consortiumin\" PhpSecInfoon perustuvaa tietoa PHP-asennuksesi turvallisuudesta, ja tarjoaa suosituksia parannuksiin. Se on työkalu monitasoiseen turvallisuuteen. Se ei korvaa turvallisia kehitysmenetelmiä, eikä korvaa auditointia.",
         "Security": "Turvallisuus",
         "SecurityInformation": "PHP:n turvallisuustiedot",
         "Test": "Testi",
