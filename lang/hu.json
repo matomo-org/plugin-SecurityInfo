@@ -1,6 +1,6 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "A PhpSecInfo alapján - PHP Security Consortium. Ez a bővítmény biztonsági információkat biztosít az ön PHP környezetéről és javaslatokat azok javításáról. Több rétegben közelíti meg a biztonságot. Nem írja felül sem a biztonsági fejlesztési gyakorlatokat, sem az auditokat a kód\/applikációval kapcsolatban.",
+        "PluginDescription": "A PhpSecInfo alapján - PHP Security Consortium. Ez a bővítmény biztonsági információkat biztosít az Ön PHP környezetéről és javaslatokat azok javításáról. Több rétegben közelíti meg a biztonságot. Nem írja felül sem a biztonsági fejlesztési gyakorlatokat, sem az auditokat a kód\/alkalmazásokkal kapcsolatban.",
         "Security": "Biztonság",
         "SecurityInformation": "PHP biztonsági információ",
         "Test": "Teszt",
