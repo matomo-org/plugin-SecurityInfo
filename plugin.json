@@ -1,24 +1,24 @@
 {
     "name": "SecurityInfo",
-    "version": "3.0.5",
+    "version": "3.0.6",
     "description": "Provides security information about your PHP environment and offers suggestions based on PhpSecInfo from the PHP Security Consortium.",
     "keywords": ["security","phpsec"],
     "license": "GPL v3+",
-    "homepage": "http://piwik.org",
+    "homepage": "https://matomo.org",
     "require": {
         "piwik": ">=3.0.0-b1,<4.0.0-b1"
     },
 
     "support": {
-        "issues": "https://github.com/piwik/plugin-SecurityInfo/issues",
-        "forum": "https://forum.piwik.org",
-        "source": "https://github.com/piwik/plugin-SecurityInfo"
+        "issues": "https://github.com/matomo-org/plugin-SecurityInfo/issues",
+        "forum": "https://forum.matomo.org",
+        "source": "https://github.com/matomo-org/plugin-SecurityInfo"
     },
     "authors": [
         {
-            "name": "Piwik",
-            "email": "hello@piwik.org",
-            "homepage": "http://piwik.org"
+            "name": "Matomo",
+            "email": "hello@matomo.org",
+            "homepage": "https://matomo.org"
         }
     ]
 }
