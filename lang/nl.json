@@ -1,8 +1,8 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "Gebaseerd op de PhpSecInfo van het PHP Security Forum, toont deze plguin beveiligings informatie over je PHP omgeving en biedt deze suggesties aan ter verbetering. Het is een tool met een gelaagde beveiligins benadering. Het vervangt niet ontwikkelen volgens de security standaarden en het controleren van de code\/applicatie.",
+        "PluginDescription": "Gebaseerd op de PhpSecInfo van het PHP Security Consortium, toont deze plugin beveiligingsinformatie over je PHP omgeving en biedt deze suggesties aan ter verbetering. Het is een hulpmiddel in een meerlaagse beveiligingsbenadering. Het vervangt geen veilige ontwikkelingspraktijken, noch controleert het de code\/applicatie.",
         "Security": "Beveiliging",
-        "SecurityInformation": "Php veiligheidsinformatie",
+        "SecurityInformation": "PHP Security informatie",
         "Test": "Testen",
         "Result": "Resultaat"
     }
