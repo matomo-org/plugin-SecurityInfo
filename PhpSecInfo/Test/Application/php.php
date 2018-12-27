@@ -31,7 +31,7 @@ class PhpSecInfo_Test_Application_Php extends PhpSecInfo_Test_Application
     {
         $this->current_value = PHP_VERSION;
 
-        $url = 'http://php.net/releases/?serialize=1&version=7';
+        $url = 'https://php.net/releases/?serialize=1&version=7';
         $timeout = self::SOCKET_TIMEOUT;
         try {
             $latestVersion = Http::sendHttpRequest($url, $timeout);
