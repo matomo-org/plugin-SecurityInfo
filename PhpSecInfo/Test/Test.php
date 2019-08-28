@@ -380,7 +380,7 @@ class PhpSecInfo_Test
             return 0;
         }
 
-        $last = strtolower($val{strlen($val) - 1});
+        $last = strtolower($val[strlen($val) - 1]);
 
         if (is_string($last)) {
             $val = substr($val, 0, -1);
