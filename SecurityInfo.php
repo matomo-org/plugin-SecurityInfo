@@ -2,21 +2,18 @@
 /**
  * Matomo - free/libre analytics platform
  *
- * @link https://matomo.org
+ * @link    https://matomo.org
  * @license http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
- *
  */
-namespace Piwik\Plugins\SecurityInfo;
 
-use Piwik\Config;
-use Piwik\Db;
+namespace Piwik\Plugins\SecurityInfo;
 
 /**
  */
 class SecurityInfo extends \Piwik\Plugin
 {
     /**
-     * @see Piwik\Plugin::registerEvents
+     * @see \Piwik\Plugin::registerEvents
      */
     public function registerEvents()
     {
@@ -29,5 +26,4 @@ class SecurityInfo extends \Piwik\Plugin
     {
         $stylesheets[] = "plugins/SecurityInfo/stylesheets/securityinfo.less";
     }
-
 }
