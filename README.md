@@ -1,6 +1,6 @@
 # Matomo SecurityInfo Plugin
 
-[![Build Status](https://travis-ci.org/matomo-org/plugin-SecurityInfo.svg?branch=4.x-dev)](https://travis-ci.org/matomo-org/plugin-SecurityInfo)
+[![Build Status](https://travis-ci.com/matomo-org/plugin-SecurityInfo.svg?branch=4.x-dev)](https://travis-ci.com/matomo-org/plugin-SecurityInfo)
 
 ## Description
 
