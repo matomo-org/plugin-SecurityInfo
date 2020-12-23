@@ -5,7 +5,6 @@
  * @package PhpSecInfo
  * @author Piwik
  */
-
 use Piwik\Http;
 
 /**
