@@ -37,7 +37,6 @@ class PhpSecInfo_Test_Application_Php extends PhpSecInfo_Test_Application
         try {
             $latestVersion = Http::sendHttpRequest($url, $timeout);
             $versionInfo = json_decode($latestVersion, true);
-            var_dump($versionInfo);
             if (empty($versionInfo["version"])) {
                 $this->recommended_value = '';
             } else {
