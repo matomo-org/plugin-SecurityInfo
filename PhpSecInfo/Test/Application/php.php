@@ -5,6 +5,8 @@
  * @package PhpSecInfo
  * @author Piwik
  */
+
+use Piwik\Common;
 use Piwik\Http;
 
 /**
@@ -23,6 +25,7 @@ require_once(PHPSECINFO_BASE_DIR . '/Test/Test_Application.php');
 class PhpSecInfo_Test_Application_Php extends PhpSecInfo_Test_Application
 {
     const SOCKET_TIMEOUT = 2;
+    const PHP_MAJOR_VERSION = 7;
     var $test_name = "PHP";
 
     var $recommended_value = null;
@@ -31,12 +34,17 @@ class PhpSecInfo_Test_Application_Php extends PhpSecInfo_Test_Application
     {
         $this->current_value = PHP_VERSION;
 
-        $url = 'https://php.net/releases/?serialize=1&version=7';
+        $url = "https://php.net/releases/?json=1&version=" . self::PHP_MAJOR_VERSION;
         $timeout = self::SOCKET_TIMEOUT;
         try {
             $latestVersion = Http::sendHttpRequest($url, $timeout);
-            $versionInfo = safe_unserialize($latestVersion);
-            $this->recommended_value = $versionInfo['version'];
+            $versionInfo = json_decode($latestVersion, true);
+            var_dump($versionInfo);
+            if (empty($versionInfo["version"])) {
+                $this->recommended_value = '';
+            } else {
+                $this->recommended_value = $versionInfo["version"];
+            }
         } catch (Exception $e) {
             $this->recommended_value = '';
         }
