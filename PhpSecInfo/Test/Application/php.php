@@ -6,7 +6,6 @@
  * @author Piwik
  */
 
-use Piwik\Common;
 use Piwik\Http;
 
 /**
