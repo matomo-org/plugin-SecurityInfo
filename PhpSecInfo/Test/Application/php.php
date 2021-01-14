@@ -31,12 +31,16 @@ class PhpSecInfo_Test_Application_Php extends PhpSecInfo_Test_Application
     {
         $this->current_value = PHP_VERSION;
 
-        $url = 'https://php.net/releases/?serialize=1&version=7';
+        $url = "https://php.net/releases/?json=1&version=" . PHP_MAJOR_VERSION;
         $timeout = self::SOCKET_TIMEOUT;
         try {
             $latestVersion = Http::sendHttpRequest($url, $timeout);
-            $versionInfo = safe_unserialize($latestVersion);
-            $this->recommended_value = $versionInfo['version'];
+            $versionInfo = json_decode($latestVersion, true);
+            if (empty($versionInfo["version"])) {
+                $this->recommended_value = '';
+            } else {
+                $this->recommended_value = $versionInfo["version"];
+            }
         } catch (Exception $e) {
             $this->recommended_value = '';
         }
