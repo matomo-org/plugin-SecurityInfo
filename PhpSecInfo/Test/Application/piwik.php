@@ -23,7 +23,7 @@ require_once(PHPSECINFO_BASE_DIR . '/Test/Test_Application.php');
  */
 class PhpSecInfo_Test_Application_Piwik extends PhpSecInfo_Test_Application
 {
-    var $test_name = "Piwik";
+    var $test_name = "Matomo";
 
     var $recommended_value = null;
 
@@ -62,9 +62,9 @@ class PhpSecInfo_Test_Application_Piwik extends PhpSecInfo_Test_Application
             $piwikVersion = $recommendedValue = 'Screenshot testing - Version is hidden';
         }
 
-        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_OK, 'en', "You are running Piwik " . $piwikVersion . " (the latest version).");
-        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_NOTICE, 'en', "You are running Piwik " . $piwikVersion . ".  The latest version of Piwik is " . $recommendedValue . ".");
-        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_WARN, 'en', "You are running Piwik " . $piwikVersion . " which is no longer supported by the Piwik developers. We recommend running the latest (stable) version of Piwik which includes numerous enhancements, bug fixes, and security fixes.");
-        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_ERROR, 'en', "Unable to determine the latest version of Piwik available.");
+        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_OK, 'en', "You are running Matomo " . $piwikVersion . " (the latest version).");
+        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_NOTICE, 'en', "You are running Matomo " . $piwikVersion . ".  The latest version of Matomo is " . $recommendedValue . ".");
+        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_WARN, 'en', "You are running Matomo " . $piwikVersion . " which is no longer supported by the Matomo developers. We recommend running the latest (stable) version of Matomo which includes numerous enhancements, bug fixes, and security fixes.");
+        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_ERROR, 'en', "Unable to determine the latest version of Matomo available.");
     }
 }
