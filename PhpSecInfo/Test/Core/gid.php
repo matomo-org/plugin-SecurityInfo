@@ -87,6 +87,10 @@ class PhpSecInfo_Test_Core_Gid extends PhpSecInfo_Test_Core
     {
         parent::_setMessages();
 
+        if (getenv('GITHUB')) {
+            $this->_messages = array();
+            $this->_messages[PHPSECINFO_TEST_RESULT_OK]['en'] = 'PHP is executing as what is probably a non-privileged group';
+        }
         $this->setMessageForResult(PHPSECINFO_TEST_RESULT_OK, 'en', 'PHP is executing as what is probably a non-privileged group');
         $this->setMessageForResult(PHPSECINFO_TEST_RESULT_WARN, 'en', 'PHP may be executing as a "privileged" group, which could be a serious security vulnerability.');
         $this->setMessageForResult(PHPSECINFO_TEST_RESULT_NOTRUN, 'en', 'This test will not run on Windows OSes');
