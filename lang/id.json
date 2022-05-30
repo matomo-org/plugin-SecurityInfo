@@ -1,6 +1,6 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "Berdasarkan PhpSecInfo dari PHP Security Consortium, plugin ini memberikan informasi keamanan mengenai lingkungan PHP Anda dan menawarkan saran untuk perbaikan. Ini adalah alat dalam pendekatan keamanan berlapis-lapis. Ini tidak menggantikan praktik pengembangan yang aman atau mengaudit kode/aplikasi.",
+        "PluginDescription": "Berdasarkan PhpSecInfo dari PHP Security Consortium, pengaya ini memberikan informasi keamanan mengenai lingkungan PHP Anda dan menawarkan saran untuk perbaikan. Ini adalah alat dalam pendekatan keamanan berlapis-lapis. Ini tidak menggantikan praktik pengembangan yang aman atau mengaudit kode/aplikasi.",
         "Result": "Hasil",
         "Security": "Keamanan",
         "SecurityInformation": "Informasi Keamanan PHP",
