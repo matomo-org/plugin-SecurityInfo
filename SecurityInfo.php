@@ -19,11 +19,20 @@ class SecurityInfo extends \Piwik\Plugin
     {
         return array(
             'AssetManager.getStylesheetFiles' => 'getStylesheetFiles',
+            'Translate.getClientSideTranslationKeys' => 'getClientSideTranslationKeys',
         );
     }
 
     public function getStylesheetFiles(&$stylesheets)
     {
         $stylesheets[] = "plugins/SecurityInfo/stylesheets/securityinfo.less";
+    }
+
+    public function getClientSideTranslationKeys(&$keys)
+    {
+        $keys[] = 'SecurityInfo_SecurityInformation';
+        $keys[] = 'SecurityInfo_PluginDescription';
+        $keys[] = 'SecurityInfo_Test';
+        $keys[] = 'SecurityInfo_Result';
     }
 }
