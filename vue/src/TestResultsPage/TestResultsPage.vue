@@ -41,7 +41,7 @@
         <tr v-for="(test, j) in section" :key="j">
           <td class="test">{{ j }}</td>
           <td
-            :class="[-1, -2, -4].indexOf(test.result) === -1
+            :class="[-1, -2, -4].indexOf(test.result) !== -1
               ? `testresult${-test.result}` : 'testresult5'"
             v-html="$sanitize(test.message)"
           ></td>
