@@ -5,6 +5,6 @@
 {% block content %}
     <div
         vue-entry="SecurityInfo.TestResultsPage"
-        results="{{ results|json_encode|e('html_attr') }}"
+        results="{{ results|json_encode }}"
     ></div>
 {% endblock %}
