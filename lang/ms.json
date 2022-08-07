@@ -1,1 +1,9 @@
-{}
+{
+    "SecurityInfo": {
+        "PluginDescription": "Berdasarkan PhpSecInfo daripada Konsortium Keselamatan PHP, pemalam ini menyediakan maklumat keselamatan tentang persekitaran PHP anda dan menawarkan cadangan untuk penambahbaikan. Ia adalah alat dalam pendekatan keselamatan berbilang lapisan. Ia tidak menggantikan amalan pembangunan selamat atau mengaudit kod/aplikasi.",
+        "Result": "Hasilnya",
+        "Security": "Keselamatan",
+        "SecurityInformation": "Maklumat Keselamatan PHP",
+        "Test": "Ujian"
+    }
+}
