@@ -139,7 +139,7 @@ if (typeof window !== 'undefined') {
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 
-// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./plugins/SecurityInfo/vue/src/TestResultsPage/TestResultsPage.vue?vue&type=template&id=e72949de
+// CONCATENATED MODULE: ./node_modules/@vue/cli-plugin-babel/node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/@vue/cli-plugin-babel/node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/@vue/cli-service/node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist??ref--0-1!./plugins/SecurityInfo/vue/src/TestResultsPage/TestResultsPage.vue?vue&type=template&id=8051f2ae
 
 
 var _hoisted_1 = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("p", null, [/*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createTextVNode"])(" Learn more: read our guide "), /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createElementVNode"])("a", {
@@ -154,7 +154,7 @@ var _hoisted_2 = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vu
   target: "_blank",
   href: "https://plugins.matomo.org/ActivityLog",
   rel: "noreferrer noopener"
-}, " Activity Log plugin for Matomo "), /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createTextVNode"])(" improves your security and diagnostic by letting you quickly review the actions performed by members of your organization or clients in your Matomo. ")], -1);
+}, "Activity Log plugin for Matomo"), /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createTextVNode"])(" improves your security and diagnostic by letting you quickly review the actions performed by members of your organization or clients in your Matomo. ")], -1);
 
 var _hoisted_3 = {
   class: "securityInfoTable"
@@ -189,7 +189,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, 1032, ["content-title"]);
   }), 128))]);
 }
-// CONCATENATED MODULE: ./plugins/SecurityInfo/vue/src/TestResultsPage/TestResultsPage.vue?vue&type=template&id=e72949de
+// CONCATENATED MODULE: ./plugins/SecurityInfo/vue/src/TestResultsPage/TestResultsPage.vue?vue&type=template&id=8051f2ae
 
 // EXTERNAL MODULE: external "CoreHome"
 var external_CoreHome_ = __webpack_require__("19dc");

@@ -19,9 +19,12 @@
 
       <p class="alert-info alert">
         Did you know? The
-        <a target='_blank' href='https://plugins.matomo.org/ActivityLog' rel="noreferrer noopener">
-          Activity Log plugin for Matomo
-        </a> improves your security and diagnostic by letting you quickly review the actions
+        <a
+          target='_blank'
+          href='https://plugins.matomo.org/ActivityLog'
+          rel="noreferrer noopener"
+        >Activity Log plugin for Matomo</a>
+        improves your security and diagnostic by letting you quickly review the actions
         performed by members of your organization or clients in your Matomo.
       </p>
     </div>
