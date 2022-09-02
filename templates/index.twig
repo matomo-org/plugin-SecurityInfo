@@ -3,38 +3,8 @@
 {% set title %}{{ 'SecurityInfo_SecurityInformation'|translate }}{% endset %}
 
 {% block content %}
-<div piwik-content-intro>
-    <h2>{{ title }}</h2>
-    <p>{{ 'SecurityInfo_PluginDescription'|translate }}</p>
-    <p>Learn more: read our guide <a rel='noreferrer' target='_blank' href='https://matomo.org/docs/security/'>Hardening Matomo: How to make Matomo and your web server
-            more secure?</a></p>
-
-    <p class="alert-info alert">Did you know?
-        The <a target='_blank' href='https://plugins.matomo.org/ActivityLog' rel="noreferrer noopener">Activity Log plugin for Matomo</a> improves your security and diagnostic
-        by letting you quickly review the actions performed by members of your organization or clients in your Matomo.
-    </p>
-</div>
-{% for i,section in results.test_results %}
-<div piwik-content-block content-title="{{ i|e('html_attr') }}">
-    <table piwik-content-table class="securityInfoTable">
-        <thead>
-        <tr>
-            <th>{{ 'SecurityInfo_Test'|translate }}</th>
-            <th>{{ 'SecurityInfo_Result'|translate }}</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for j,test in section %}
-            <tr>
-                <td class="test">{{ j }}</td>
-                {% set color -%}
-                    {% if test.result == -1 %}testresult1{% elseif test.result == -2 %}testresult2{% elseif test.result == -4 %}testresult4{% else %}testresult5{% endif %}
-                {%- endset %}
-                <td class="{{ color }}">{{ test.message|raw }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-</div>
-{% endfor %}
+    <div
+        vue-entry="SecurityInfo.TestResultsPage"
+        results="{{ results|json_encode }}"
+    ></div>
 {% endblock %}
