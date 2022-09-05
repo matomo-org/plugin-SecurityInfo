@@ -1,6 +1,6 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "Security info and suggested improvements for the PHP. As a multilayered security approach, it does not replace secure development practices, nor auditing the code\/application. Based on PhpSecInfo from the PHP Security Consortium.",
+        "PluginDescription": "Security info and suggested improvements for your PHP environment. It does not replace secure development practices, nor auditing the code\/application. Based on PhpSecInfo from the PHP Security Consortium.",
         "Security": "Security",
         "SecurityInformation": "PHP Security Info",
         "Test": "Test",
