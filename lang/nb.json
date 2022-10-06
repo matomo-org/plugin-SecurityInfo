@@ -1,9 +1,9 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "Basert på PhpSecInfo fra PHP Security Consortium, gir denne utvidelsen sikkerhetsinformasjon om ditt PHP-miljø, og gir deg anbefalinger for forbedringer. Det er ett verktøy av flere i en tilnærming til sikkerhet. Det erstatter ikke sikker utviklingspraksis og går ikke gjennom koden/programmet for deg.",
+        "PluginDescription": "Sikkerhetsinformasjon og anbefalte forbedringer for ditt PHP-miljø. Erstatter ikke sikker utviklingspraksis eller gjennomgang av koden/programmet. Basert på PhpSecInfo fra PHP Security Consortium.",
         "Result": "Resultat",
         "Security": "Sikkerhet",
-        "SecurityInformation": "PHP-sikkerhetsinformasjon",
+        "SecurityInformation": "PHP-sikkerhetsinfo",
         "Test": "Test"
     }
 }

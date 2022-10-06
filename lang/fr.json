@@ -1,9 +1,9 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "Basé sur PhpSecInfo du consortium PHP Sécurité, ce composant fournit des informations de sécurité à propos de votre environnement PHP et suggère des pistes d'amélioration. C'est un outil de sécurité utilisant une approche multicouche. Ceci ne remplace pas les pratiques sécurisées de développement et n'audit pas non plus le code\/l'application.",
+        "PluginDescription": "Établi sur PhpSecInfo du consortium PHP Sécurité, ce composant fourni des informations de sécurité à propos de votre environnement PHP et suggère des pistes d'amélioration. C'est un outil de sécurité utilisant une approche multicouche. Ceci ne remplace pas les pratiques sécurisées de développement et n'audite pas non plus le code/l'application.",
+        "Result": "Résultat",
         "Security": "Sécurité",
-        "SecurityInformation": "Information de sécurité de PHP",
-        "Test": "Test",
-        "Result": "Résultat"
+        "SecurityInformation": "Informations de sécurité PHP",
+        "Test": "Test"
     }
 }

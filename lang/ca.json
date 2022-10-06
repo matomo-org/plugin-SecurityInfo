@@ -1,6 +1,6 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "Basat en PhpSecInfo del PHP Security Consortium, aquest connector proporciona informació de seguretat sobre el vostre entorn PHP i ofereix suggeriments de millora. És una eina més en un enfocament de seguretat multicapa. No substitueix les pràctiques de desenvolupament segures ni audita el codi/aplicació.",
+        "PluginDescription": "Informació de seguretat i millores suggerides per al vostre entorn PHP. No substitueix les pràctiques de desenvolupament segures, ni l'auditoria del codi/aplicació. Basat en PhpSecInfo del PHP Security Consortium.",
         "Result": "Resultat",
         "Security": "Seguretat",
         "SecurityInformation": "Informació de Seguretat de PHP",
