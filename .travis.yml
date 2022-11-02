@@ -5,6 +5,7 @@ language: php
 php:
   - 7.2
   - 7.4
+  - 8.1
 #  - hhvm
 
 services:
@@ -39,6 +40,8 @@ matrix:
   exclude:
     # execute UI tests only w/ PHP 5.6
     - php: 7.4
+      env: TEST_SUITE=UITests MYSQL_ADAPTER=PDO_MYSQL TEST_AGAINST_PIWIK_BRANCH=$PIWIK_TEST_TARGET
+     - php: 8.1
       env: TEST_SUITE=UITests MYSQL_ADAPTER=PDO_MYSQL TEST_AGAINST_PIWIK_BRANCH=$PIWIK_TEST_TARGET
 
 dist: bionic
