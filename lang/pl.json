@@ -1,9 +1,9 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "Wtyczka ta bazując na PhpSecInfo pochodzącym z PHP Security Consortium, dostarcza informacji o bezpieczeństwie Twojego środowiska i oferuje podpowiedzi ulepszeń. To narzędzie z wielowarstwowym podejściem do bezpieczeństwa. Nie zastępuje ono praktyk bezpiecznej budowy aplikacji ani nie wykonuje audytu kodu \/ aplikacji.",
+        "PluginDescription": "Informacje o bezpieczeństwie i sugerowane ulepszenia dla Twojego środowiska PHP. Nie zastępuje praktyk bezpiecznego rozwoju, ani audytu kodu/aplikacji. Oparte na PhpSecInfo z PHP Security Consortium.",
+        "Result": "Wynik",
         "Security": "Bezpieczeństwo",
         "SecurityInformation": "Informacje o zabezpieczeniach PHP",
-        "Test": "Test",
-        "Result": "Wynik"
+        "Test": "Test"
     }
 }
