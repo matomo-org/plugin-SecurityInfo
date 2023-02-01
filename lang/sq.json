@@ -1,9 +1,9 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "E bazuar në PhpSecInfo nga PHP Security Consortium, kjo shtojcë ofron të dhëna sigurie rreth mjedisit tuaj PHP dhe ofron këshilla për përmirësim të tij. Është një mjet që funksionon mbi bazën e trajtimit të sigurisë si shumështresore. Nuk zëvendëson praktika zhvillimi të sigurt, as bën ndonjë auditim të kodit/aplikacionit.",
+        "PluginDescription": "Hollësi sigurie rreth mjedisit tuaj PHP dhe këshilla për përmirësim të tij. Nuk zëvendëson praktika zhvillimi të sigurt, as bën ndonjë auditim të kodit/aplikacionit. Bazuar në PhpSecInfo nga PHP Security Consortium.",
         "Result": "Përfundimi",
         "Security": "Siguri",
-        "SecurityInformation": "Të dhëna Sigurie PHP",
+        "SecurityInformation": "Hollësi Sigurie PHP",
         "Test": "Provë"
     }
 }
