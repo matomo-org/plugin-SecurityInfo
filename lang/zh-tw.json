@@ -1,9 +1,9 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "基於 PHP 安全聯盟的 PhpSecInfo，這個外掛提供了有關你的 PHP 環境的安全資訊，並提供改進建議。它是多層面安全的方法的工具。它不會取代安全開發的做法，也不會審核程式碼\/應用程式。",
+        "PluginDescription": "針對你的 PHP 環境提供安全資訊和改進建議。。它不會取代安全開發的做法，也不會審核程式碼/應用程式。基於 PHP 安全協會的 PhpSecInfo 開發。",
+        "Result": "結果",
         "Security": "安全性",
-        "SecurityInformation": "PHP 安全性資訊",
-        "Test": "測試",
-        "Result": "結果"
+        "SecurityInformation": "PHP 安全性",
+        "Test": "測試"
     }
 }
