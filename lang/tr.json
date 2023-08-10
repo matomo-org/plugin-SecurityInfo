@@ -1,6 +1,6 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "PHP ortamınız için güvenlik bilgileri görüntüleyerek ve önerilen geliştirme önerilerini sunar. Güvenli yazılım geliştirme uygulamalarının ya a da kod ve uygulama denetiminin yerine geçmez. PHP Security Consortium tarafından hazırlanmış PhpSecInfo kullanılarak hazırlanmıştır.",
+        "PluginDescription": "PHP ortamınız için güvenlik bilgileri görüntüleyerek ve önerilen geliştirme önerilerini sunar. Güvenli yazılım geliştirme uygulamalarının ya da kod ve uygulama denetiminin yerine geçmez. PHP Security Consortium tarafından hazırlanmış PhpSecInfo kullanılarak hazırlanmıştır.",
         "Result": "Sonuç",
         "Security": "Güvenlik",
         "SecurityInformation": "PHP güvenlik bilgileri",
