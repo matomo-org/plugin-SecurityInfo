@@ -12,7 +12,7 @@
       <p>{{ translate('SecurityInfo_PluginDescription') }}</p>
       <p>
         Learn more: read our guide
-        <a rel='noreferrer' target='_blank' href='https://matomo.org/docs/security/'>
+        <a rel='noreferrer' target='_blank' :href='externalRawLink("https://matomo.org/faq/on-premise/how-to-configure-matomo-for-security/")'>
           Hardening Matomo: How to make Matomo and your web server more secure?
         </a>
       </p>
@@ -21,7 +21,7 @@
         Did you know? The
         <a
           target='_blank'
-          href='https://plugins.matomo.org/ActivityLog'
+          :href='externalRawLink("https://plugins.matomo.org/ActivityLog")'
           rel="noreferrer noopener"
         >Activity Log plugin for Matomo</a>
         improves your security and diagnostic by letting you quickly review the actions
