@@ -12,7 +12,7 @@
       <p>{{ translate('SecurityInfo_PluginDescription') }}</p>
       <p>
         Learn more: read our guide
-        <a rel='noreferrer' target='_blank' :href='externalRawLink("https://matomo.org/docs/security/")'>
+        <a rel='noreferrer' target='_blank' :href='externalRawLink("https://matomo.org/faq/on-premise/how-to-configure-matomo-for-security/")'>
           Hardening Matomo: How to make Matomo and your web server more secure?
         </a>
       </p>
