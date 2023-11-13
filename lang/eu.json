@@ -1,8 +1,9 @@
 {
     "SecurityInfo": {
+        "PluginDescription": "Segurtasun informazioa eta zure PHP ingurunea hobetzeko gomendioak. Ez ditu ordezkatzen garapen segururako ohitura onak, ezta ere kodea/aplikazioa auditatzea ere. PHP Security Consortium-en PhpSecInfo-n oinarritua.",
+        "Result": "Emaitza",
         "Security": "Segurtasuna",
         "SecurityInformation": "PHP segurtasun-informazioa",
-        "Test": "Probatu",
-        "Result": "Emaitza"
+        "Test": "Probatu"
     }
 }
