@@ -44,6 +44,7 @@ class PhpSecInfo_Test_Application extends PhpSecInfo_Test
     {
         $urls = array(
             'Piwik' => 'http://piwik.org/changelog',
+            'Matomo' => 'http://piwik.org/changelog',
             'PHP'   => 'http://php.net/',
         );
 
