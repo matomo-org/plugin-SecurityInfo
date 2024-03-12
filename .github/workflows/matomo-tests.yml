@@ -32,6 +32,29 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  PluginTests:
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [ '7.2', '8.2' ]
+        target: ['minimum_required_matomo', 'maximum_supported_matomo']
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          lfs: true
+          persist-credentials: false
+      - name: Install package ripgrep
+        run: sudo apt-get install ripgrep
+      - name: Run tests
+        uses: matomo-org/github-action-tests@main
+        with:
+          plugin-name: 'SecurityInfo'
+          php-version: ${{ matrix.php }}
+          test-type: 'PluginTests'
+          matomo-test-branch: ${{ matrix.target }}
+          artifacts-pass: ${{ secrets.ARTIFACTS_PASS }}
+          upload-artifacts: ${{ matrix.php == '7.2' && matrix.target == 'maximum_supported_matomo' }}
   UI:
     runs-on: ubuntu-20.04
     steps:
@@ -42,6 +65,7 @@ jobs:
       - name: running tests
         uses: matomo-org/github-action-tests@main
         with:
+          testomatio: ${{secrets.TESTOMATIO}}
           plugin-name: 'SecurityInfo'
           matomo-test-branch: 'maximum_supported_matomo'
           test-type: 'UI'
