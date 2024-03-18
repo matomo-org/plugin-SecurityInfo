@@ -20,5 +20,6 @@
             "email": "hello@matomo.org",
             "homepage": "https://matomo.org"
         }
-    ]
+    ],
+    "category": "security"
 }
