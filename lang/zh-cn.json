@@ -1,9 +1,9 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "该插件基于PHP安全协会的PhpSecInfo，提供有关您的PHP环境的安全信息，并提供改进建议。 它是多层安全方法中的工具。 它不会替代安全的开发实践，也不会审核代码\/应用程序。",
+        "PluginDescription": "关于您PHP环境的安全信息和建议改进措施。它不替代安全开发实践，也不进行代码/应用程序的审计。基于PHP Security Consortium的PhpSecInfo。",
+        "Result": "结果",
         "Security": "安全",
-        "SecurityInformation": "PHP 安全信息",
-        "Test": "测试",
-        "Result": "结果"
+        "SecurityInformation": "PHP安全信息",
+        "Test": "测试"
     }
 }
