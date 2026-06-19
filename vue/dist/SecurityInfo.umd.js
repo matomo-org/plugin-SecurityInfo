@@ -39,7 +39,7 @@
         vue.createElementVNode("h2", null, vue.toDisplayString(_ctx.translate("SecurityInfo_SecurityInformation")), 1),
         vue.createElementVNode("p", null, vue.toDisplayString(_ctx.translate("SecurityInfo_PluginDescription")), 1),
         vue.createElementVNode("p", null, [
-          vue.createTextVNode(" Learn more: read our guide "),
+          _cache[0] || (_cache[0] = vue.createTextVNode(" Learn more: read our guide ", -1)),
           vue.createElementVNode("a", {
             rel: "noreferrer",
             target: "_blank",
@@ -47,13 +47,13 @@
           }, " Hardening Matomo: How to make Matomo and your web server more secure? ", 8, _hoisted_1)
         ]),
         vue.createElementVNode("p", _hoisted_2, [
-          vue.createTextVNode(" Did you know? The "),
+          _cache[1] || (_cache[1] = vue.createTextVNode(" Did you know? The ", -1)),
           vue.createElementVNode("a", {
             target: "_blank",
             href: _ctx.externalRawLink("https://plugins.matomo.org/ActivityLog"),
             rel: "noreferrer noopener"
           }, "Activity Log plugin for Matomo", 8, _hoisted_3),
-          vue.createTextVNode(" improves your security and diagnostic by letting you quickly review the actions performed by members of your organization or clients in your Matomo. ")
+          _cache[2] || (_cache[2] = vue.createTextVNode(" improves your security and diagnostic by letting you quickly review the actions performed by members of your organization or clients in your Matomo. ", -1))
         ])
       ])), [
         [_directive_content_intro]
