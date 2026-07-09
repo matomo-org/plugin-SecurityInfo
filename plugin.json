@@ -1,12 +1,12 @@
 {
     "name": "SecurityInfo",
-    "version": "5.0.5",
+    "version": "6.0.0",
     "description": "Provides security information about your PHP environment and offers suggestions based on PhpSecInfo from the PHP Security Consortium.",
     "keywords": ["security","phpsec"],
     "license": "GPL v3+",
     "homepage": "https://matomo.org",
     "require": {
-        "matomo": ">=5.0.0-rc5,<6.0.0-b1"
+        "matomo": ">=6.0.0-b1,<7.0.0-b1"
     },
 
     "support": {
