@@ -31,7 +31,7 @@
     <ContentBlock
       v-for="(section, i) in results.test_results"
       :key="i"
-      :content-title="i"
+      :content-title="String(i)"
     >
       <table v-content-table class="securityInfoTable">
         <thead>

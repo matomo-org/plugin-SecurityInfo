@@ -61,7 +61,7 @@
       (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.results.test_results, (section, i) => {
         return vue.openBlock(), vue.createBlock(_component_ContentBlock, {
           key: i,
-          "content-title": i
+          "content-title": String(i)
         }, {
           default: vue.withCtx(() => [
             vue.withDirectives((vue.openBlock(), vue.createElementBlock("table", _hoisted_4, [
