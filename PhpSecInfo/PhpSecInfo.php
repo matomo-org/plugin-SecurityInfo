@@ -220,9 +220,7 @@ class PhpSecInfo
      * The tests shipped by this plugin, grouped by their Test/ subdirectory.
      *
      * loadTests() only ever includes files named in this list. The directory is
-     * deliberately NOT scanned: an attacker able to write into Test/<group>/ must
-     * not be able to have an arbitrary file executed as PHP simply by dropping it
-     * there (regardless of its name or extension).
+     * deliberately NOT scanned, new test files should be added here exclusively
      *
      * @var array<string, string[]>
      */
