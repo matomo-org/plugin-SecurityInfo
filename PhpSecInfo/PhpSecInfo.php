@@ -217,36 +217,63 @@ class PhpSecInfo
 
 
     /**
-     * recurses through the Test subdir and includes classes in each test group subdir,
-     * then builds an array of classnames for the tests that will be run
+     * The tests shipped by this plugin, grouped by their Test/ subdirectory.
+     *
+     * loadTests() only ever includes files named in this list. The directory is
+     * deliberately NOT scanned, new test files should be added here exclusively
+     *
+     * @var array<string, string[]>
+     */
+    private static $shippedTests = array(
+        'Application' => array('php', 'piwik'),
+        'CGI'         => array('force_redirect'),
+        'Core'        => array(
+            'allow_url_fopen',
+            'allow_url_include',
+            'display_errors',
+            'expose_php',
+            'file_uploads',
+            'gid',
+            'magic_quotes_gpc',
+            'memory_limit',
+            'open_basedir',
+            'post_max_size',
+            'register_globals',
+            'uid',
+            'upload_max_filesize',
+            'upload_tmp_dir',
+        ),
+        'Curl'        => array('file_support'),
+        'Session'     => array('save_path', 'use_trans_sid'),
+    );
+
+    /**
+     * Includes the test classes shipped by this plugin and builds the array of
+     * classnames for the tests that will be run.
+     *
+     * Only the files enumerated in self::$shippedTests are loaded; the Test/
+     * directories are never listed, so no file that happens to be present on disk
+     * is included unless this plugin ships it under that exact name.
      */
     public function loadTests()
     {
+        $testRoot = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'Test';
 
-        $test_root = dir(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'Test');
+        $classNames = array();
 
-        //echo "<pre>"; echo print_r($test_root, true); echo "</pre>";
+        foreach (self::$shippedTests as $testDir => $testFiles) {
+            foreach ($testFiles as $testFile) {
+                $path = $testRoot . DIRECTORY_SEPARATOR . $testDir . DIRECTORY_SEPARATOR . $testFile . '.php';
 
-        while (false !== ($entry = $test_root->read())) {
-            if (is_dir($test_root->path . DIRECTORY_SEPARATOR . $entry) && !preg_match('~^(\.|_vti)(.*)$~', $entry)) {
-                $test_dirs[] = $entry;
-            }
-        }
-        //echo "<pre>"; echo print_r($test_dirs, true); echo "</pre>";
-
-        // include_once all files in each test dir
-        foreach ($test_dirs as $test_dir) {
-            $this_dir = dir($test_root->path . DIRECTORY_SEPARATOR . $test_dir);
-
-            while (false !== ($entry = $this_dir->read())) {
-                if (!is_dir($this_dir->path . DIRECTORY_SEPARATOR . $entry)) {
-                    include_once $this_dir->path . DIRECTORY_SEPARATOR . $entry;
-                    $classNames[] = "PhpSecInfo_Test_" . $test_dir . "_" . basename($entry, '.php');
+                if (!is_file($path)) {
+                    continue;
                 }
+
+                include_once $path;
+                $classNames[] = "PhpSecInfo_Test_" . $testDir . "_" . $testFile;
             }
         }
 
-        // modded this to not throw a PHP5 STRICT notice, although I don't like passing by value here
         $this->tests_to_run = $classNames;
     }
 
