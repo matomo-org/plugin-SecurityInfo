@@ -7,11 +7,11 @@
  * @license https://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
  */
 
-namespace Piwik\Plugins\SecurityInfo\tests\System;
+namespace Piwik\Plugins\SecurityInfo\tests\Unit;
 
-use Piwik\Tests\Framework\TestCase\SystemTestCase;
+use Piwik\Tests\Framework\TestCase\UnitTestCase;
 
-class PhpSecInfoShippedTestsTest extends SystemTestCase
+class PhpSecInfoShippedTestsTest extends UnitTestCase
 {
     public function testShippedTestsAllowlistMatchesShippedTestFiles()
     {
