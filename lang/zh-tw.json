@@ -1,9 +1,9 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "針對你的 PHP 環境提供安全資訊和改進建議。。它不會取代安全開發的做法，也不會審核程式碼/應用程式。基於 PHP 安全協會的 PhpSecInfo 開發。",
+        "PluginDescription": "針對你的 PHP 環境提供安全資訊和改進建議。它不會取代安全開發的做法，也不會取代程式碼／應用程式的稽核。基於 PHP Security Consortium 的 PhpSecInfo 開發。",
         "Result": "結果",
         "Security": "安全性",
-        "SecurityInformation": "PHP 安全性",
+        "SecurityInformation": "PHP 安全性資訊",
         "Test": "測試"
     }
 }
