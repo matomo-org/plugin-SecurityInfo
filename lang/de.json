@@ -1,6 +1,6 @@
 {
     "SecurityInfo": {
-        "PluginDescription": "Sicherheitsinformationen und Verbesserungsvorschläge für Ihre PHP Umgebung. Es ersetzt weder sichere Programmierung noch überprüft es Programmcode. Basiert auf PhpSecInfo des PHP Security Consortiums.",
+        "PluginDescription": "Sicherheitsinformationen und Verbesserungsvorschläge für Ihre PHP-Umgebung. Es ersetzt weder sichere Programmierung noch überprüft es Programmcode. Basiert auf PhpSecInfo des PHP Security Consortiums.",
         "Result": "Ergebnis",
         "Security": "Sicherheit",
         "SecurityInformation": "PHP-Sicherheitsinformationen",
