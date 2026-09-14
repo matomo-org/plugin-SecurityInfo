@@ -1,0 +1,25 @@
+parameters:
+    level: 5
+    phpVersion: 80100
+    tmpDir: /tmp/phpstan/SecurityInfo/main
+    paths:
+        - .
+    excludePaths:
+        analyseAndScan:
+            - tests/*
+            # The shared workflow leaves this helper checkout in the workspace, and `paths: .`
+            # would otherwise analyse it as if it were plugin code.
+            - github-action-tests/*
+        analyse:
+            # Vendored third-party library (PhpSecInfo by Ed Finkler), committed here with its
+            # own LICENSE. Not analysed as if it were our code, but still scanned so the class
+            # Controller.php instantiates keeps resolving.
+            - PhpSecInfo/*
+    bootstrapFiles:
+        - ../../bootstrap-phpstan.php
+    universalObjectCratesClasses:
+        - Piwik\Config
+        - Piwik\View
+        - Piwik\ViewDataTable\Config
+    scanDirectories:
+        - ../../
