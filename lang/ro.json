@@ -3,7 +3,7 @@
         "PluginDescription": "Informații de securitate și îmbunătățiri sugerate pentru mediul PHP. Nu înlocuiește practicile de dezvoltare securizată și nici auditarea codului/aplicației. Bazat pe PhpSecInfo de la PHP Security Consortium.",
         "Result": "Rezultat",
         "Security": "Securitate",
-        "SecurityInformation": "Informaţii Securitate PHP",
+        "SecurityInformation": "Informații despre securitatea PHP",
         "Test": "Test"
     }
 }
