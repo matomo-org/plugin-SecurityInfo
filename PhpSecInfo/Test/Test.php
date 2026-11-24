@@ -501,89 +501,41 @@ class PhpSecInfo_Test
 
 
     /**
-     * Returns an array of data returned from the UNIX 'id' command
+     * Returns the effective process UID, effective GID, and group IDs.
      *
-     * includes uid, username, gid, groupname, and groups (if "exec"
-     * is enabled). Groups is an array of all the groups the user
-     * belongs to.  Keys are the group ids, values are the group names.
+     * Group IDs are array keys. Returns false if the identity cannot be read.
      *
-     * returns FALSE if no suitable function is available to retrieve
-     * the data
-     *
-     * @return array|boolean
+     * @return array|false
      */
     public function getUnixId()
     {
-
         if ($this->osIsWindows()) {
             return false;
         }
 
-        $success = false;
-
-
-        if (function_exists("exec") && !PhpSecInfo_Test::getBooleanIniValue('safe_mode')) {
-            $id_raw = exec('id');
-            // uid=1000(coj) gid=1000(coj) groups=1000(coj),1001(admin)
-            preg_match(
-                "|uid=(\d+)\((\S+)\)\s+gid=(\d+)\((\S+)\)\s+groups=(.+)|i",
-                $id_raw,
-                $matches
-            );
-
-            if (!$matches) {
-                /**
-                 * for some reason the output from 'id' wasn't as we expected.
-                 * return false so the test doesn't run.
-                 */
-                $success = false;
-            } else {
-                $id_data = array('uid'      => $matches[1],
-                                 'username' => $matches[2],
-                                 'gid'      => $matches[3],
-                                 'group'    => $matches[4]);
-
-                $groups = array();
-                if ($matches[5]) {
-                    $gs = $matches[5];
-                    $gs = explode(',', $gs);
-                    foreach ($gs as $groupstr) {
-                        if (preg_match("/(\d+)\(([^\)]+)\)/", $groupstr, $subs)) {
-                            $groups[$subs[1]] = $subs[2];
-                        } else {
-                            $groups[$groupstr] = '';
-                        }
-                    }
-                    ksort($groups);
-                }
-                $id_data['groups'] = $groups;
-                $success = true;
-            }
-        }
-
-        if (
-            !$success && function_exists("posix_getpwuid") && function_exists("posix_geteuid")
-            && function_exists('posix_getgrgid') && function_exists('posix_getgroups')
-        ) {
-            $data = posix_getpwuid(posix_getuid());
-            $id_data['uid'] = $data['uid'];
-            $id_data['username'] = $data['name'];
-            $id_data['gid'] = $data['gid'];
-            //$group_data = posix_getgrgid( posix_getegid() );
-            //$id_data['group'] = $group_data['name'];
-            $id_data['groups'] = array();
+        if (function_exists('posix_geteuid') && function_exists('posix_getegid') && function_exists('posix_getgroups')) {
+            $uid = posix_geteuid();
+            $gid = posix_getegid();
             $groups = posix_getgroups();
-            foreach ($groups as $gid) {
-                //$group_data = posix_getgrgid(posix_getgid());
-                $id_data['groups'][$gid] = '<unknown>';
+            if ($uid >= 0 && $gid >= 0 && $groups !== false) {
+                return ['uid' => $uid, 'gid' => $gid, 'groups' => array_fill_keys($groups, '')];
             }
-            $success = true;
         }
 
-        if ($success) {
-            return $id_data;
-        } else {
+        if (!function_exists('exec') || self::getBooleanIniValue('safe_mode')) {
             return false;
         }
+
+        $uid = exec('id -u', result_code: $uidStatus);
+        $gid = exec('id -g', result_code: $gidStatus);
+        $groups = exec('id -G', result_code: $groupsStatus);
+        if ($uidStatus !== 0 || $gidStatus !== 0 || $groupsStatus !== 0
+            || !preg_match('/^\d+$/D', $uid) || !preg_match('/^\d+$/D', $gid)
+            || !preg_match('/^\d+(?:\s+\d+)*$/D', $groups)
+        ) {
+            return false;
+        }
+
+        return ['uid' => (int) $uid, 'gid' => (int) $gid, 'groups' => array_fill_keys(preg_split('/\s+/', $groups), '')];
     }
 }

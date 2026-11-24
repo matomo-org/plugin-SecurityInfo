@@ -14,13 +14,6 @@ require_once(PHPSECINFO_BASE_DIR . '/Test/Test_Core.php');
 
 
 /**
- * the minimum "safe" UID that php should be executing as.  This can vary,
- * but in general 100 seems like a good min.
- *
- */
-define('PHPSECINFO_MIN_SAFE_GID', 100);
-
-/**
  * Test class for GID
  *
  * @package PhpSecInfo
@@ -34,7 +27,7 @@ class PhpSecInfo_Test_Core_Gid extends PhpSecInfo_Test_Core
      */
     public $test_name = "group_id";
 
-    public $recommended_value = PHPSECINFO_MIN_SAFE_GID;
+    public $recommended_value = "Nonzero";
 
 
     /**
@@ -44,10 +37,10 @@ class PhpSecInfo_Test_Core_Gid extends PhpSecInfo_Test_Core
      */
     public function isTestable()
     {
-        if ($this->osIsWindows()) {
-            return false;
-        } elseif ($this->getUnixId() === false) {
-            $this->setMessageForResult(PHPSECINFO_TEST_RESULT_NOTRUN, 'en', 'Functions required to retrieve group ID not available');
+        if ($this->current_value === false) {
+            if (!$this->osIsWindows()) {
+                $this->setMessageForResult(PHPSECINFO_TEST_RESULT_NOTRUN, 'en', 'Unable to determine the PHP process GID');
+            }
             return false;
         }
         return true;
@@ -56,28 +49,18 @@ class PhpSecInfo_Test_Core_Gid extends PhpSecInfo_Test_Core
     public function _retrieveCurrentValue()
     {
         $id = $this->getUnixId();
-        if (is_array($id)) {
-            $lowest_gid = key($id['groups']);
-            $this->current_value = $lowest_gid;
-        } else {
+        if ($id === false) {
             $this->current_value = false;
+            return;
         }
+
+        $this->current_value = array_key_exists(0, $id['groups']) ? 0 : (int) $id['gid'];
     }
 
-    /**
-     * Checks the GID of the PHP process to make sure it is above PHPSECINFO_MIN_SAFE_GID
-     *
-     * @see PHPSECINFO_MIN_SAFE_GID
-     */
     public function _execTest()
     {
-        if ($this->current_value >= $this->recommended_value) {
-            return PHPSECINFO_TEST_RESULT_OK;
-        }
-
-        return PHPSECINFO_TEST_RESULT_WARN;
+        return $this->current_value === 0 ? PHPSECINFO_TEST_RESULT_WARN : PHPSECINFO_TEST_RESULT_OK;
     }
-
 
     /**
      * Set the messages specific to this test
@@ -86,8 +69,8 @@ class PhpSecInfo_Test_Core_Gid extends PhpSecInfo_Test_Core
     {
         parent::_setMessages();
 
-        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_OK, 'en', 'PHP is executing as what is probably a non-privileged group');
-        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_WARN, 'en', 'PHP may be executing as a "privileged" group, which could be a serious security vulnerability.');
+        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_OK, 'en', 'PHP does not have group ID 0. This check does not assess other group permissions.');
+        $this->setMessageForResult(PHPSECINFO_TEST_RESULT_WARN, 'en', 'PHP has group ID 0 as its effective or supplementary group. Review whether this membership is necessary.');
         $this->setMessageForResult(PHPSECINFO_TEST_RESULT_NOTRUN, 'en', 'This test will not run on Windows OSes');
     }
 }
