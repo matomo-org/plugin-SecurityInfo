@@ -33,7 +33,7 @@ class PhpSecInfo_Test_Application_Php extends PhpSecInfo_Test_Application
     {
         $this->current_value = PHP_VERSION;
 
-        $url = "https://php.net/releases/?json=1&version=" . PHP_MAJOR_VERSION;
+        $url = "https://www.php.net/releases/?json=1&version=" . PHP_MAJOR_VERSION;
         $timeout = self::SOCKET_TIMEOUT;
         try {
             $latestVersion = Http::sendHttpRequest($url, $timeout);
