@@ -1,5 +1,8 @@
 ## Changelog
 
+6.0.3
+- Fixed the PHP version check failing when `open_basedir` is enabled by using the canonical PHP releases URL.
+
 6.0.2 - 2026-11-23
 - Updated translations
 
